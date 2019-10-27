@@ -1,5 +1,11 @@
 <ul>
-  <li *ngFor="let item of menu">
-    <a href="#">{{ item.title }}</a>
+  <li *ngFor="let item of menu; let i = index">
+    <a
+      href="{{ item.link }}"
+      [class.active]="i === selectedIndex"
+      (click)="selectedIndex = i"
+    >
+      {{ item.title }}
+    </a>
   </li>
 </ul>
