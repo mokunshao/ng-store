@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  .slideshow {
+    display: flex;
+    .slide {
+      width: 100%;
+    }
+  }
+  .nav-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    .slide-button {
+      display: flex;
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: white;
+      margin: 5px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TopMenu } from './scrollable-tabs/scrollable-tabs.component';
+import { Slide } from './slideshow/slideshow.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,20 @@ export class AppComponent {
     { title: '汽车', link: '#' },
     { title: '医药', link: '#' },
     { title: '内衣', link: '#' },
+  ];
+  slides: Slide[] = [
+    {
+      imgUrl:
+        'https://gss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/3bf33a87e950352ac17159075c43fbf2b2118ba8.jpg',
+      caption: 'xxx',
+      link: 'https://www.baidu.com',
+    },
+    {
+      imgUrl:
+        'https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/42166d224f4a20a4a51c41c89f529822720ed0bb.jpg',
+      caption: 'xxx',
+      link: 'https://www.baidu.com',
+    },
   ];
   handleTabSelected(e: TopMenu) {
     console.log(e);

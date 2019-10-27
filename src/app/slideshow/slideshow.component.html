@@ -1,0 +1,13 @@
+<div class="container">
+  <div #slideshow class="slideshow">
+    <img
+      class="slide"
+      *ngFor="let slide of slides"
+      [src]="slide.imgUrl"
+      [alt]="slide.caption"
+    />
+  </div>
+  <div class="nav-section">
+    <span class="slide-button" *ngFor="let slide of slides"></span>
+  </div>
+</div>
