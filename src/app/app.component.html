@@ -1,1 +1,4 @@
-<app-scrollable-tabs></app-scrollable-tabs>
+<app-scrollable-tabs
+  [menu]="topMenu"
+  (tabSelected)="handleTabSelected($event)"
+></app-scrollable-tabs>

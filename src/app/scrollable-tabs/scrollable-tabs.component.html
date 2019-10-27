@@ -3,9 +3,10 @@
     <a
       href="{{ item.link }}"
       [class.active]="i === selectedIndex"
-      (click)="selectedIndex = i"
+      (click)="handleSelection(i)"
     >
       {{ item.title }}
     </a>
+    <span class="indicator" *ngIf="i === selectedIndex"></span>
   </li>
 </ul>
