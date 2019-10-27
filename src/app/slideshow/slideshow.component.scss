@@ -3,8 +3,11 @@
   overflow: hidden;
   .slideshow {
     display: flex;
+    overflow-x: scroll;
     .slide {
       width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
     }
   }
   .nav-section {

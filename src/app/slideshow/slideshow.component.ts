@@ -24,17 +24,17 @@ export interface Slide {
 export class SlideshowComponent implements OnInit, AfterViewInit {
   @ViewChild('slideshow', { static: true }) slideshow: ElementRef;
   @ViewChildren('slideImgs') slideImgs: QueryList<ElementRef>;
+  @Input() slideShowHeight = '300px';
   @Input() slides: Slide[] = [];
   constructor(private rd2: Renderer2) {}
 
   ngOnInit() {
-    console.log(this.slideshow);
+    // console.log(this.slideshow);
   }
   ngAfterViewInit() {
-    console.log(this.slideImgs);
-
-    this.slideImgs.forEach((item) => {
-      this.rd2.setStyle(item.nativeElement, 'max-height', '300px');
-    });
+    // console.log(this.slideImgs);
+    // this.slideImgs.forEach((item) => {
+    //   this.rd2.setStyle(item.nativeElement, 'height', '300px');
+    // });
   }
 }
