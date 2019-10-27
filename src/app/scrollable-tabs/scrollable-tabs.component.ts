@@ -14,6 +14,10 @@ export class ScrollableTabsComponent implements OnInit {
   selectedIndex = -1;
   title = 'ng-store';
   @Input() menu: TopMenu[] = [];
+  @Input() backgroundColor = 'white';
+  @Input() titleColor = 'grey';
+  @Input() titleActiveColor = 'black';
+  @Input() indicatorColor = 'black';
   @Output() tabSelected = new EventEmitter();
 
   constructor() {}
