@@ -12,7 +12,6 @@ export interface TopMenu {
 })
 export class ScrollableTabsComponent implements OnInit {
   selectedIndex = -1;
-  title = 'ng-store';
   @Input() menu: TopMenu[] = [];
   @Input() backgroundColor = 'white';
   @Input() titleColor = 'grey';
