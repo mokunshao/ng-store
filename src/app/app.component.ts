@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { TopMenu } from './scrollable-tabs/scrollable-tabs.component';
-import { Slide } from './slideshow/slideshow.component';
+import { Slide, SlideshowComponent } from './slideshow/slideshow.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  @ViewChild(SlideshowComponent, { static: true })
+  slideshowComponent: SlideshowComponent;
+
   topMenu: TopMenu[] = [
     { title: '热门', link: '#' },
     { title: '男装', link: '#' },
@@ -37,5 +40,8 @@ export class AppComponent {
   ];
   handleTabSelected(e: TopMenu) {
     console.log(e);
+  }
+  ngAfterViewInit(): void {
+    console.log(this.slideshowComponent);
   }
 }

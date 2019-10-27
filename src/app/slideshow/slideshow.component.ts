@@ -1,4 +1,14 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  ViewChildren,
+  QueryList,
+  AfterViewInit,
+  Renderer2,
+} from '@angular/core';
 
 export interface Slide {
   imgUrl: string;
@@ -11,12 +21,20 @@ export interface Slide {
   templateUrl: './slideshow.component.html',
   styleUrls: ['./slideshow.component.scss'],
 })
-export class SlideshowComponent implements OnInit {
+export class SlideshowComponent implements OnInit, AfterViewInit {
   @ViewChild('slideshow', { static: true }) slideshow: ElementRef;
+  @ViewChildren('slideImgs') slideImgs: QueryList<ElementRef>;
   @Input() slides: Slide[] = [];
-  constructor() {}
+  constructor(private rd2: Renderer2) {}
 
   ngOnInit() {
     console.log(this.slideshow);
+  }
+  ngAfterViewInit() {
+    console.log(this.slideImgs);
+
+    this.slideImgs.forEach((item) => {
+      this.rd2.setStyle(item.nativeElement, 'max-height', '300px');
+    });
   }
 }

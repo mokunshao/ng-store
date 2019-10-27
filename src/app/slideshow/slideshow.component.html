@@ -1,6 +1,7 @@
 <div class="container">
   <div #slideshow class="slideshow">
     <img
+      #slideImgs
       class="slide"
       *ngFor="let slide of slides"
       [src]="slide.imgUrl"
