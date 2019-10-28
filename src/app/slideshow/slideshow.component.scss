@@ -4,10 +4,13 @@
   .slideshow {
     display: flex;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     .slide {
       width: 100%;
       flex-shrink: 0;
       object-fit: cover;
+      scroll-snap-align: start;
     }
   }
   .nav-section {

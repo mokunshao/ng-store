@@ -37,11 +37,17 @@ export class AppComponent implements AfterViewInit {
       caption: 'xxx',
       link: 'https://www.baidu.com',
     },
+    {
+      imgUrl:
+        'https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b17eca8065380cd780b4dee2ae44ad3459828112.jpg',
+      caption: 'xxx',
+      link: 'https://www.baidu.com',
+    },
   ];
   handleTabSelected(e: TopMenu) {
     console.log(e);
   }
   ngAfterViewInit(): void {
-    console.log(this.slideshowComponent);
+    // console.log(this.slideshowComponent);
   }
 }
