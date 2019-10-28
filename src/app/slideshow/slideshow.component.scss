@@ -30,6 +30,9 @@
       border-radius: 50%;
       background-color: white;
       margin: 5px;
+      &-selected {
+        background-color: red;
+      }
     }
   }
 }

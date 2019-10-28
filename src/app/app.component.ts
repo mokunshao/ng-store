@@ -43,6 +43,12 @@ export class AppComponent implements AfterViewInit {
       caption: 'xxx',
       link: 'https://www.baidu.com',
     },
+    {
+      imgUrl:
+        'https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2cf5e0fe9925bc31698b629751df8db1ca1370ee.jpg',
+      caption: 'xxx',
+      link: 'https://www.baidu.com',
+    },
   ];
   handleTabSelected(e: TopMenu) {
     console.log(e);

@@ -1,5 +1,10 @@
 <div class="container">
-  <div #slideshow class="slideshow" [ngStyle]="{ height: slideShowHeight }">
+  <div
+    (scroll)="handleScroll($event)"
+    #slideshow
+    class="slideshow"
+    [ngStyle]="{ height: slideShowHeight }"
+  >
     <img
       #slideImgs
       class="slide"
@@ -9,6 +14,10 @@
     />
   </div>
   <div class="nav-section">
-    <span class="slide-button" *ngFor="let slide of slides"></span>
+    <span
+      class="slide-button"
+      *ngFor="let slide of slides; let i = index"
+      [ngClass]="{ 'slide-button-selected': i === selectedIndex }"
+    ></span>
   </div>
 </div>
